@@ -1,4 +1,9 @@
-body {
-    max-width: 500px;
+.topBar {
+    margin:auto;
+    max-width: 50%;
+}
+#divHistory{
     margin: auto;
+    max-width: 60%;
+    font-family: "Lucida Handwriting", Cursive;
 }

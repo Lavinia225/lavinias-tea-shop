@@ -4,8 +4,8 @@
 }
 
 #blackTeaImage, #greenTeaImage, #herbalTeaImage, #whiteTeaImage {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
 }
 

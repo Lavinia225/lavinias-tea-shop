@@ -2,6 +2,13 @@
     margin:auto;
     max-width: 50%;
 }
+
+#blackTeaImage, #greenTeaImage, #herbalTeaImage, #whiteTeaImage {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
 #divHistory{
     margin: auto;
     max-width: 60%;

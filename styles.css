@@ -1,17 +1,23 @@
 .welcome {
     margin: auto;
-    max-width: 27%;
+    max-width: 30%;
+    font-family: "Lucida Handwriting", Cursive;
+    
 }
 
 .topBar {
     margin:auto;
     max-width: 25%;
+    padding-top: 30px;
 }
 
 #blackTeaImage, #greenTeaImage, #herbalTeaImage, #whiteTeaImage {
     height: 100px;
     width: 100px;
-    border-radius: 50%;
+    border: #000;
+    background: #a52a2a;
+    border-style: solid;
+    border-radius: 5px;
 }
 
 #divHistory{
@@ -21,7 +27,7 @@
 }
 
 body {
-    background-image:url('https://pixabay.com/get/g9e0bb1d007f2b124dec4eb4b6e629978b58494e0f2da9c488269b3e90c3c98dc6d3f16ccc5f4311dc30669b3f52366c0.jpg');
+    background-image:url('./images/mainBackground.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }

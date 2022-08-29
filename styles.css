@@ -1,6 +1,6 @@
 .welcome {
     margin: auto;
-    max-width: 30%;
+    max-width: 40%;
     font-family: "Lucida Handwriting", Cursive;
     
 }
@@ -12,8 +12,8 @@
 }
 
 #blackTeaImage, #greenTeaImage, #herbalTeaImage, #whiteTeaImage {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border: #000;
     background: #a52a2a;
     border-style: solid;

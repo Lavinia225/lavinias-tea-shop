@@ -20,6 +20,13 @@
     border-radius: 5px;
 }
 
+.teaRedirect {
+    background: #a52a2a;
+    border-style: solid;
+    border-radius: 5px;
+    padding-right: 15px;
+}
+
 #divHistory{
     margin: auto;
     max-width: 60%;

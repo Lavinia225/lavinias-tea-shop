@@ -1,0 +1,20 @@
+#divHistory{
+    margin: auto;
+    max-width: 60%;
+    font-family: "Lucida Handwriting", Cursive;
+}
+
+p {
+    background-color: #a52a2a;
+    border: black;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+h2 {
+    background-color: #a52a2a;
+    border: #000;
+    border-style: solid;
+    border-radius: 5px;
+    display: inline;
+}

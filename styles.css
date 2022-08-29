@@ -27,26 +27,13 @@
     padding-right: 15px;
 }
 
-#divHistory{
-    margin: auto;
-    max-width: 60%;
-    font-family: "Lucida Handwriting", Cursive;
-}
-
 body {
     background-image:url('./images/mainBackground.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-p {
-    background-color: #a52a2a;
-    border: black;
-    border-style: solid;
-    border-radius: 5px;
-}
-
-h1, h2 {
+h1 {
     background-color: #a52a2a;
     border: #000;
     border-style: solid;

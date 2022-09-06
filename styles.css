@@ -1,7 +1,7 @@
 .welcome {
     margin: auto;
     max-width: 40%;
-    font-family: "Lucida Handwriting", Cursive;
+    font-family: "Georgia", serif;
     
 }
 
@@ -15,13 +15,13 @@
     height: 80px;
     width: 80px;
     border: #000;
-    background: #a52a2a;
+    background: #c8936a;
     border-style: solid;
     border-radius: 5px;
 }
 
 .teaRedirect {
-    background: #a52a2a;
+    background: #c8936a;
     border-style: solid;
     border-radius: 5px;
     padding-right: 15px;
@@ -34,7 +34,7 @@ body {
 }
 
 h1 {
-    background-color: #a52a2a;
+    background-color: #c8936a;
     border: #000;
     border-style: solid;
     border-radius: 5px;

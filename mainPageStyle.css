@@ -1,18 +1,18 @@
 #divHistory{
     margin: auto;
     max-width: 60%;
-    font-family: "Lucida Handwriting", Cursive;
+    font-family: "Georgia", serif;
 }
 
 p {
-    background-color: #a52a2a;
-    border: black;
+    background-color: #c8936a;
+    border: #000;
     border-style: solid;
     border-radius: 5px;
 }
 
 h2 {
-    background-color: #a52a2a;
+    background-color: #c8936a;
     border: #000;
     border-style: solid;
     border-radius: 5px;

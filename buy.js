@@ -21,7 +21,7 @@ document.addEventListener("keypress", function(b){
         else {
             totalPrice = 0;
             productPrices.forEach(nyan => {totalPrice = totalPrice + parseFloat(nyan)});
-            alert("$" + totalPrice.toFixed(2));
+            alert("Products:" + productNames + `\n Total Price: $${totalPrice.toFixed(2)}`);
         }
     }
 });

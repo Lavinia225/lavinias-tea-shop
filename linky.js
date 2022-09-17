@@ -29,3 +29,7 @@ document.getElementById("whiteTeaImage").addEventListener('click', function(){
 document.getElementById("banner").addEventListener('click', function(){
     window.location.href = `./index.html`;
 });
+
+document.getElementById("cart").addEventListener('click', function(){
+    window.location.href = "./cart.html";
+});

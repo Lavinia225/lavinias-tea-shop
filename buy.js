@@ -1,19 +1,10 @@
-document.getElementById("cart").addEventListener('click', function(){
-    if (productNames[0] === undefined){
-        alert("Empty Cart.");
-    }
-    else{
-        totalPrice = 0;
-        productPrices.forEach(nyan => {totalPrice = totalPrice + parseFloat(nyan)});
-        alert("Products:" + productNames + `\n Total Price: $${totalPrice.toFixed(2)}`);
-    }
-});
-
 const productNames = [];
 const productPrices = [];
 let totalPrice = 0;
 
-document.addEventListener("keypress", function(b){
+cookieReader();
+
+document.addEventListener("keypress", function(b){ //Make this later send you to the cart post testing.
     if (b.key === "b"){
         if(productNames[0] === undefined){
             alert("Empty Cart.");
@@ -25,6 +16,21 @@ document.addEventListener("keypress", function(b){
         }
     }
 });
+
+//This is where the cart table generation method goes.
+
+if (window.location.href.includes(cart)){ 
+    let table = getElementById("table");
+    let row1 = document.getElementById("row1");
+    let row2 = document.getElementById("row2");
+    let a  = document.createElement("td");
+    let b = document.createTextNode("test");
+    a.appendChild("row1");
+    b.appendChild("a");
+
+}
+
+
 
 
 //The below is just test code again
@@ -53,5 +59,3 @@ function clicked(clicked_id)
         productNames.push(nameHolder[i]);
     }
   }
-
-  cookieReader();

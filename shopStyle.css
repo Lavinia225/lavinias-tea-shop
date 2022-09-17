@@ -11,3 +11,10 @@ img {
     border-style: solid;
     border-radius: 50%
 }
+
+#howToBuy {
+    margin: auto;
+    max-width: 415px;
+    background-color: #c8936a;
+    border: #000 solid 3px;
+}

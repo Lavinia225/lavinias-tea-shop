@@ -2,7 +2,16 @@
     margin: auto;
     max-width: 40%;
     font-family: "Georgia", serif;
-    
+}
+
+#cart {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #c8936a;
+    border: #000;
+    border-style: solid;
+    border-radius: 5px;
 }
 
 .topBar {
@@ -18,6 +27,10 @@
     background: #c8936a;
     border-style: solid;
     border-radius: 5px;
+}
+
+p #padder{
+    padding-bottom: 10px;
 }
 
 .teaRedirect {

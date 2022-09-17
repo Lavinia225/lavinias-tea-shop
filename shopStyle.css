@@ -1,4 +1,13 @@
 table {
     margin:auto;
     max-width:50%;
+    background-color:#808080;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+img {
+    border: #000;
+    border-style: solid;
+    border-radius: 50%
 }

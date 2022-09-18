@@ -1,4 +1,6 @@
 table {
+    margin: auto;
+    max-width: 50%;
     background-color: #c8936a;
     border: #000;
     border-style: solid;

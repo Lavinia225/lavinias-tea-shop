@@ -2,7 +2,9 @@ const productNames = [];
 const productPrices = [];
 let totalPrice = 0;
 
-cookieReader();
+if (document.cookie){
+    cookieReader();
+}
 
 document.addEventListener("keypress", function(b){ //Make this later send you to the cart post testing.
     if (b.key === "b"){
@@ -19,15 +21,23 @@ document.addEventListener("keypress", function(b){ //Make this later send you to
 
 //This is where the cart table generation method goes.
 
-if (window.location.href.includes(cart)){ 
-    let table = getElementById("table");
-    let row1 = document.getElementById("row1");
-    let row2 = document.getElementById("row2");
-    let a  = document.createElement("td");
-    let b = document.createTextNode("test");
-    a.appendChild("row1");
-    b.appendChild("a");
+if (window.location.href.includes("cart")){ 
+    let table = document.getElementById("table");
 
+    for (i = 0; i < productNames.length; i++){ //One row takes two data.
+        let row = document.createElement("tr");
+        let data1 = document.createElement("td");
+        let data2 = document.createElement("td");
+        let text1 = document.createTextNode(productNames[i]);
+        let text2 = document.createTextNode(productPrices[i]);
+
+        table.appendChild(row);
+        row.appendChild(data1);
+        row.appendChild(data2);
+        data1.appendChild(text1);
+        data2.appendChild(text2);
+
+    }
 }
 
 
@@ -41,8 +51,7 @@ function clicked(clicked_id)
       let itemName = clicked_id.slice(0, clicked_id.indexOf("$") - 1);
       productPrices.push(itemPrice);
       productNames.push(" " + itemName);
-      document.cookie=`productPrices=${productPrices};Max-Age=86,400,000; Secure;`; //Max age is milliseconds in a day, or 1000 * 60 * 60 * 24
-      document.cookie=`productNames=${productNames};Max-Age=86,400,000; Secure;`;
+      cookieSetter();
   }
 
   function cookieReader(){
@@ -58,4 +67,9 @@ function clicked(clicked_id)
     for (i = 0; i < nameHolder.length; i++){
         productNames.push(nameHolder[i]);
     }
+  }
+
+  function cookieSetter(){
+      document.cookie=`productPrices=${productPrices};Max-Age=86,400,000; Secure;`; //Max age is milliseconds in a day, or 1000 * 60 * 60 * 24 for 86,400,000
+      document.cookie=`productNames=${productNames};Max-Age=86,400,000; Secure;`;
   }

@@ -13,28 +13,9 @@ if(productNames[0] === ""){
 
 document.addEventListener("keypress", function(b){ //Make this later send you to the cart post testing.
     if (b.key === "b"){
-        if(productNames[0] === undefined){
-            alert("Empty Cart.");
-        }
-        else {
-            totalPrice = 0;
-            productPrices.forEach(nyan => {totalPrice = totalPrice + parseFloat(nyan)});
-            alert("Products:" + productNames + `\n Total Price: $${totalPrice.toFixed(2)}`);
-        }
+        window.location.href = "./cart.html";
     }
 });
-
-document.getElementById("buyButton").addEventListener('click', function(){
-    alert("Purchase Succeeded! (This is not a real shop, this is as far as you can get.");
-});
-
-document.getElementById("resetButton").addEventListener('click', function(){
-    productNames.splice(0);
-    productPrices.splice(0);
-    document.cookie=`productPrices=${productPrices};Max-Age=1; Secure;`;
-    document.cookie=`productNames=${productNames};Max-Age=1; Secure;`;
-    location.reload();
-})
 
 //This is where the cart table generation method goes.
 
@@ -65,14 +46,60 @@ if (window.location.href.includes("cart")){
         data2.appendChild(text2);
         imgHolder.appendChild(img);
 
-        document.getElementById(img.id).addEventListener('click', function(){
+        document.getElementById(img.id).addEventListener('click', function(){ //This is for the delete button.
             let elementNumber = img.id.slice(3, img.id.length);
             productNames.splice(elementNumber, 1);
             productPrices.splice(elementNumber, 1);
             cookieSetter();
             location.reload();
-        });
+        })
+    }
 
+    if (document.getElementById("img0") != null){ //To set the total price and add the buy/reset buttons at the bottom of it all
+        let finalRow = document.createElement("tr");
+        let trueFinalRow = document.createElement("tr");
+        let emptySpot = document.createElement("td");
+        let totalPriceSpot = document.createElement("td");
+        let purchaseButtonSpot = document.createElement("td");
+        let resetyButtonSpot = document.createElement("td");
+        let notEmptySpot = document.createTextNode("Total Price:");
+        let purchaseButton = document.createElement("button");
+        let resetyButton = document.createElement ("button");
+
+        purchaseButton.id = "buyButton";
+        purchaseButton.type = "button";
+        purchaseButton.textContent = "Buy";
+        resetyButton.id = "resetButton";
+        resetyButton.type = "button";
+        resetyButton.textContent = "Empty Cart";
+
+        totalPrice = 0;
+        productPrices.forEach(nyan => {totalPrice = totalPrice + parseFloat(nyan)});
+        let totalPriceText = document.createTextNode(`$${totalPrice.toFixed(2)}`);
+
+        table.appendChild(finalRow);
+        table.appendChild(trueFinalRow);
+        finalRow.appendChild(emptySpot);
+        finalRow.appendChild(totalPriceSpot);
+        totalPriceSpot.appendChild(totalPriceText);
+        emptySpot.appendChild(notEmptySpot);
+        trueFinalRow.appendChild(purchaseButtonSpot);
+        trueFinalRow.appendChild(resetyButtonSpot);
+        purchaseButtonSpot.appendChild(purchaseButton);
+        resetyButtonSpot.appendChild(resetyButton);
+
+        document.getElementById("buyButton").addEventListener('click', function(){
+            alert("Purchase Succeeded! (This is not a real shop, this is as far as you can get.");
+        });
+        
+        document.getElementById("resetButton").addEventListener('click', function(){
+            productNames.splice(0);
+            productPrices.splice(0);
+            document.cookie=`productPrices=${productPrices};Max-Age=0; Secure;`;
+            document.cookie=`productNames=${productNames};Max-Age=0; Secure;`;
+            location.reload();
+        })
+        
     }
 }
 

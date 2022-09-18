@@ -1,1 +1,1 @@
-My Personal Website
+My personal website for school. It allows you to 'buy tea' from four different categories/pages, and 'purchase' them from the cart screen. 
